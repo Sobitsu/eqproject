@@ -1,0 +1,317 @@
+<div class="container">
+
+	<div class="margin-top-20">
+
+		<div class="row">
+			<div class="col-md-12">
+
+				<div class="row margin-bottom-5">
+					<div class="col-md-6 col-md-offset-6">
+						<div class="pull-right">
+							<div class="btn-group green-select">
+								<label class="btn btn-success" ng-model="filter.itemsOnPage" btn-radio="25">25</label>
+								<label class="btn btn-success" ng-model="filter.itemsOnPage" btn-radio="50">50</label>
+								<label class="btn btn-success" ng-model="filter.itemsOnPage" btn-radio="100">100</label>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+
+<!--				<table ng-if="filter.type == 'filesNspk'" class="table table-hover table-bordered my-table">
+					<thead>
+						<th>
+							<sort field="id" order-by="filter.orderBy" order-change="change()" name="ID"></sort>
+						</th>
+						<th>
+							<sort field="idEd230" order-by="filter.orderBy" order-change="change()" name="IDED230"></sort>
+						</th>
+						<th>
+							<sort field="fileName" order-by="filter.orderBy" order-change="change()" name="Файл"></sort>
+						</th>
+						<th>
+							<sort field="curRegistryDate" order-by="filter.orderBy" order-change="change()" name="Дата текущего реестра"></sort>
+						</th>
+						<th>
+							<sort field="psCode" order-by="filter.orderBy" order-change="change()" name="Код ПС"></sort>
+						</th>
+						<th>
+							<sort field="status" order-by="filter.orderBy" order-change="change()" name="Статус"></sort>
+						</th>
+						<th>
+							<sort field="recordCount" order-by="filter.orderBy" order-change="change()" name="Количество записей"></sort>
+						</th>
+						<th>
+							<sort field="debitSum" order-by="filter.orderBy" order-change="change()" name="Сумма дебета"></sort>
+						</th>
+						<th>
+							<sort field="creditSum" order-by="filter.orderBy" order-change="change()" name="Сумма кредита"></sort>
+						</th>
+						<th>
+							Документы
+						</th>
+					</thead>
+					<tbody>
+					<tr ng-repeat="item in items">
+						<td>{{item.id}}</td>
+						<td>{{item.idEd230}}</td>
+						<td>{{item.fileName}}</td>
+						<td>{{item.curRegistryDate}}</td>
+						<td>{{item.psCode}}</td>
+						<td>{{item.status}}</td>
+						<td>{{item.recordCount}}</td>
+						<td>{{item.debitSum}}</td>
+						<td>{{item.creditSum}}</td>
+						<td>
+							<a class="btn btn-default btn-sm" download ng-href="{{item.docPath}}">Показать</a>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+-->
+				<div ng-if="filter.type == 'files230'">
+					<table class="table table-hover table-bordered my-table">
+						<thead>
+						<th>
+							Выбор
+						</th>
+						<th>
+							<sort field="edNo" order-by="filter.orderBy" order-change="change()" name="EDNo"></sort>
+						</th>
+						<th>
+							<sort field="fileName" order-by="filter.orderBy" order-change="change()" name="Файл"></sort>
+						</th>
+						<th>
+							<sort field="esCreateDate" order-by="filter.orderBy" order-change="change()" name="Дата составления ЭС"></sort>
+						</th>
+						<th>
+							<sort field="status" order-by="filter.orderBy" order-change="change()" name="Статус"></sort>
+						</th>
+						<th>
+							<sort field="rejectFileName" order-by="filter.orderBy" order-change="change()" name="Файл отказа"></sort>
+						</th>
+						<th>
+							<sort field="psCode" order-by="filter.orderBy" order-change="change()" name="Код ПС"></sort>
+						</th>
+						<th>
+							<sort field="registryRecordCount" order-by="filter.orderBy" order-change="change()" name="Количество позиций в реестре"></sort>
+						</th>
+						<th>
+							<sort field="debitSum" order-by="filter.orderBy" order-change="change()" name="Сумма дебета"></sort>
+						</th>
+						<th>
+							<sort field="creditSum" order-by="filter.orderBy" order-change="change()" name="Сумма кредита"></sort>
+						</th>
+						<th>
+							<sort field="registryBeginDate" order-by="filter.orderBy" order-change="change()" name="Начало периода обработки реестра"></sort>
+						</th>
+						<th>
+							<sort field="registryEndDate" order-by="filter.orderBy" order-change="change()" name="Конец периода обработки реестра"></sort>
+						</th>
+						<th>
+							Документы
+						</th>
+						<th>
+							Текст отказа
+						</th>
+						</thead>
+						<tbody>
+						<tr ng-repeat="item in items">
+							<td>
+								<input type="checkbox" ng-model="item.checked"/>
+							</td>
+							<td>{{item.edNo}}</td>
+							<td>{{item.fileName}}</td>
+							<td>{{item.esCreateDate}}</td>
+							<td>{{item.status}}</td>
+							<td>{{item.rejectFileName}}</td>
+							<td>{{item.psCode}}</td>
+							<td>{{item.registryRecordCount}}</td>
+							<td>{{item.debitSum}}</td>
+							<td>{{item.creditSum}}</td>
+							<td>{{item.registryBeginDate}}</td>
+							<td>{{item.registryEndDate}}</td>
+							<td>
+								<a class="btn btn-default btn-sm" download ng-href="{{item.docPath}}">Показать</a>
+							</td>
+							<td>
+								<a ng-if="item.showRejectButton" class="btn btn-default btn-sm" download ng-href="{{item.rejectTextPath}}">Показать</a>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+					<a class="btn btn-default margin-top-10" ng-click="generateFiles()">Выгрузить</a>
+				</div>
+
+				<table ng-if="filter.type == 'docs'" class="table table-hover table-bordered my-table">
+					<thead class="filter-head">
+						<th>
+							<input class="form-control" type="text" ng-model="filter.id" placeholder="id">
+						</th>
+						<th></th>
+						<th></th>
+						<th>
+							<input class="form-control" type="text" ng-model="filter.status" placeholder="Статус">
+						</th>
+						<th>
+							<input class="form-control" type="text" ng-model="filter.sendFileName" placeholder="Файл отправки">
+						</th>
+						<th>
+							<input class="form-control" type="text" ng-model="filter.reject201FileName" placeholder="Файл 201">
+						</th>
+						<th>
+							<input class="form-control" type="text" ng-model="filter.reject231FileName" placeholder="Файл 231">
+						</th>
+						<th>
+							<button type="button" class="btn btn-default btn-sm" ng-click="change()">
+								<span class="glyphicon glyphicon-filter" aria-hidden="true"></span>Применить фильтр
+							</button>
+						</th>
+					</thead>
+					<thead>
+						<th>
+							<sort field="id" order-by="filter.orderBy" order-change="change()" name="Уникальный номер"></sort>
+						</th>
+						<th>
+							<sort field="bik" order-by="filter.orderBy" order-change="change()" name="БИК"></sort>
+						</th>
+						<th>
+							<sort field="sum" order-by="filter.orderBy" order-change="change()" name="Сумма"></sort>
+						</th>
+						<th>
+							<sort field="status" order-by="filter.orderBy" order-change="change()" name="Статус"></sort>
+						</th>
+						<th>
+							<sort field="sendFileName" order-by="filter.orderBy" order-change="change()" name="Файл отправки"></sort>
+						</th>
+						<th>
+							<sort field="reject201FileName" order-by="filter.orderBy" order-change="change()" name="Файл отказа 201"></sort>
+						</th>
+						<th>
+							<sort field="reject231FileName" order-by="filter.orderBy" order-change="change()" name="Файл отказа 231"></sort>
+						</th>
+						<th>
+							<sort field="date" order-by="filter.orderBy" order-change="change()" name="Дата/Время"></sort>
+						</th>
+						<th>
+							<sort field="isDebet" order-by="filter.isDebet" order-change="change()" name="Дебет/Кредит"></sort>
+						</th>
+					</thead>
+					<tbody>
+					<tr ng-repeat="item in items">
+						<td>{{item.id}}</td>
+						<td>{{item.bik}}</td>
+						<td>{{item.sum}}</td>
+						<td>{{item.status}}</td>
+						<td>{{item.sendFileName}}</td>
+						<td>{{item.reject201FileName}}</td>
+						<td>{{item.reject231FileName}}</td>
+						<td>{{item.date}}</td>
+						<td>
+							<span ng-if="item.isDebet === true" class="label label-primary">Дебет</span>
+							<span ng-if="item.isDebet === false" class="label label-success">Кредит</span>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+
+				<table ng-if="filter.type == 'responseEd201'" class="table table-hover table-bordered my-table">
+					<thead>
+					<th>
+						<sort field="edNo" order-by="filter.orderBy" order-change="change()" name="EDNo"></sort>
+					</th>
+					<th>
+						<sort field="fileName" order-by="filter.orderBy" order-change="change()" name="Файл"></sort>
+					</th>
+					<th>
+						<sort field="esCreateDate" order-by="filter.orderBy" order-change="change()" name="Дата составления ЭС"></sort>
+					</th>
+					<th>
+						<sort field="esControlCode" order-by="filter.orderBy" order-change="change()" name="Код результата контроля ЭС"></sort>
+					</th>
+					<th>
+						<sort field="esControlTime" order-by="filter.orderBy" order-change="change()" name="Время проведения контроля ЭС"></sort>
+					</th>
+					<th>
+						<sort field="description" order-by="filter.orderBy" order-change="change()" name="Текст пояснения"></sort>
+					</th>
+					<th>
+						<sort field="esParentId" order-by="filter.orderBy" order-change="change()" name="Идентификаторы исходного ЭС"></sort>
+					</th>
+					<th>
+						Документы
+					</th>
+					</thead>
+					<tbody>
+					<tr ng-repeat="item in items">
+						<td>{{item.edNo}}</td>
+						<td>{{item.fileName}}</td>
+						<td>{{item.esCreateDate}}</td>
+						<td>{{item.esControlCode}}</td>
+						<td>{{item.esControlTime}}</td>
+						<td>{{item.description}}</td>
+						<td>{{item.esParentId}}</td>
+						<td>
+							<a class="btn btn-default btn-sm" download ng-href="{{item.docPath}}">Показать</a>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+
+				<table ng-if="filter.type == 'responseEd231'" class="table table-hover table-bordered my-table">
+					<thead>
+					<th>
+						<sort field="edNo" order-by="filter.orderBy" order-change="change()" name="EDNo"></sort>
+					</th>
+					<th>
+						<sort field="fileName" order-by="filter.orderBy" order-change="change()" name="Файл"></sort>
+					</th>
+					<th>
+						<sort field="esCreateDate" order-by="filter.orderBy" order-change="change()" name="Дата составления ЭС"></sort>
+					</th>
+					<th>
+						<sort field="registryBeginDate" order-by="filter.orderBy" order-change="change()" name="Начало периода обработки реестра"></sort>
+					</th>
+					<th>
+						<sort field="registryEndDate" order-by="filter.orderBy" order-change="change()" name="Конец периода обработки реестра"></sort>
+					</th>
+					<th>
+						<sort field="systemCode" order-by="filter.orderBy" order-change="change()" name="Код системы обработки"></sort>
+					</th>
+					<th>
+						<sort field="registryRecordCount" order-by="filter.orderBy" order-change="change()" name="Количество позиций в реестре"></sort>
+					</th>
+					<th>
+						<sort field="registryType" order-by="filter.orderBy" order-change="change()" name="Вид реестра"></sort>
+					</th>
+					<th>
+						Документы
+					</th>
+					</thead>
+					<tbody>
+					<tr ng-repeat="item in items">
+						<td>{{item.edNo}}</td>
+						<td>{{item.fileName}}</td>
+						<td>{{item.esCreateDate}}</td>
+						<td>{{item.registryBeginDate}}</td>
+						<td>{{item.registryEndDate}}</td>
+						<td>{{item.systemCode}}</td>
+						<td>{{item.registryRecordCount}}</td>
+						<td>{{item.registryType}}</td>
+						<td>
+							<a class="btn btn-default btn-sm" download ng-href="{{item.docPath}}">Показать</a>
+						</td>
+					</tr>
+					</tbody>
+				</table>
+
+				<alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert(alerts, $index)" class="margin-top-10">{{alert.msg}}</alert>
+
+				<pagination items-per-page="filter.itemsOnPage" total-items="filter.totalItems" ng-model="filter.currentPage" ng-change="change()" previous-text="&lsaquo;" next-text="&rsaquo;"></pagination>
+			</div>
+		</div>
+
+
+	</div>
+
+</div> <!-- /container -->

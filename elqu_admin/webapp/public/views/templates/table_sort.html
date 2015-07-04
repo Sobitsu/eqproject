@@ -1,0 +1,6 @@
+<div ng-click="click()" class="sorting">
+    {{name}}
+
+    <i class="glyphicon glyphicon-chevron-up" ng-if="orderBy.field === field && orderBy.direction === 'asc'"></i>
+    <i class="glyphicon glyphicon-chevron-down" ng-if="orderBy.field === field && orderBy.direction === 'desc'"></i>
+</div>
