@@ -238,4 +238,8 @@
 			</plugin>
 		</plugins> 
 	</build>
+	<organization>
+		<name>Sobit</name>
+		<url>http://www.sobit.su/</url>
+	</organization>
 </project>
