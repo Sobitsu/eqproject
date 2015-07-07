@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<dataset query='select &apos;MC&apos; as SCHEME, sum(AMOUNT_NET) as NET_AMOUNT, TRANSFER_BIC from  MC_RU_CLR_NETTO group by TRANSFER_BIC order by 2 desc, 3'>
+	<record>
+		<field name='SCHEME' value='MAST' type='VARCHAR' length='2' decimal='31'/>
+		<field name='NET_AMOUNT' value='500000' type='DECIMAL' length='41' decimal='2'/>
+		<field name='TRANSFER_BIC' value='044106770' type='CHAR' length='10' decimal='0'/>
+		<field name='DC' value='D' type='CHAR' length='1' decimal='0'/>
+		<field name='ID' value='323456' type='DECIMAL' length='10' decimal='0'/>
+	</record>
+	<record>
+		<field name='SCHEME' value='MAST' type='VARCHAR' length='2' decimal='31'/>
+		<field name='NET_AMOUNT' value='100000' type='DECIMAL' length='41' decimal='2'/>
+		<field name='TRANSFER_BIC' value='044109722' type='CHAR' length='10' decimal='0'/>
+		<field name='DC' value='D' type='CHAR' length='1' decimal='0'/>
+		<field name='ID' value='323457' type='DECIMAL' length='10' decimal='0'/>
+	</record>
+	<record>
+		<field name='SCHEME' value='MAST' type='VARCHAR' length='2' decimal='31'/>
+		<field name='NET_AMOUNT' value='200000' type='DECIMAL' length='41' decimal='2'/>
+		<field name='TRANSFER_BIC' value='044030892' type='CHAR' length='10' decimal='0'/>
+		<field name='DC' value='C' type='CHAR' length='1' decimal='0'/>
+		<field name='ID' value='323458' type='DECIMAL' length='10' decimal='0'/>
+	</record>
+	<record>
+		<field name='SCHEME' value='MAST' type='VARCHAR' length='2' decimal='31'/>
+		<field name='NET_AMOUNT' value='400000' type='DECIMAL' length='41' decimal='2'/>
+		<field name='TRANSFER_BIC' value='044030877' type='CHAR' length='10' decimal='0'/>
+		<field name='DC' value='C' type='CHAR' length='1' decimal='0'/>
+		<field name='ID' value='323459' type='DECIMAL' length='10' decimal='0'/>
+	</record>
+</dataset>

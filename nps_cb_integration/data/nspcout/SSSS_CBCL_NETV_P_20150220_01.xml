@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="WINDOWS-1251"?>
+<ED230 xmlns="urn:cbr-ru:ed:v2.0" EDNo="10" EDDate="2015-02-20" EDAuthor="4533333333" RegisterItemsQuantity="7" RegisterCreditSum="1204191" EndProcessingDate="2015-02-19" RegisterDebetSum="1204191" BeginProcessingDate="2015-02-19" ClearingSystemCode="01">
+    <RegisterItemsInfo DC="2" BIC="044030755" Sum="21414" RegisterItemID="1"/>
+    <RegisterItemsInfo DC="1" BIC="044030861" Sum="13500" RegisterItemID="2"/>
+    <RegisterItemsInfo DC="1" BIC="044525495" Sum="36082" RegisterItemID="3"/>
+    <RegisterItemsInfo DC="2" BIC="044525593" Sum="1084931" RegisterItemID="4"/>
+    <RegisterItemsInfo DC="1" BIC="044525600" Sum="1154609" RegisterItemID="5"/>
+    <RegisterItemsInfo DC="2" BIC="044525823" Sum="29669" RegisterItemID="6"/>
+    <RegisterItemsInfo DC="2" BIC="044583503" Sum="68177" RegisterItemID="7"/>
+</ED230>

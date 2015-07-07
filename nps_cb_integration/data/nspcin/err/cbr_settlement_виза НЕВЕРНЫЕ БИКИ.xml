@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<dataset query='select SCHEME, abs(NET_AMOUNT) as NET_AMOUNT, TRANSFER_BIC, SIGN as DC, ENTITY_ID as ID from BO_RU_NET2STL where INSERT_DT = (select max(INSERT_DT) from BO_RU_NET2STL) '>
+	<record>
+		<field name='SCHEME' value='VISA' type='CHAR' length='4' decimal='0'/>
+		<field name='NET_AMOUNT' value='214.14' type='DECIMAL' length='19' decimal='2'/>
+		<field name='TRANSFER_BIC' value='0044030755' type='CHAR' length='10' decimal='0'/>
+		<field name='DC' value='C' type='CHAR' length='1' decimal='0'/>
+		<field name='ID' value='207' type='INTEGER' length='11' decimal='0'/>
+	</record>
+	<record>
+		<field name='SCHEME' value='VISA' type='CHAR' length='4' decimal='0'/>
+		<field name='NET_AMOUNT' value='135.00' type='DECIMAL' length='19' decimal='2'/>
+		<field name='TRANSFER_BIC' value='0044030861' type='CHAR' length='10' decimal='0'/>
+		<field name='DC' value='D' type='CHAR' length='1' decimal='0'/>
+		<field name='ID' value='208' type='INTEGER' length='11' decimal='0'/>
+	</record>
+	<record>
+		<field name='SCHEME' value='VISA' type='CHAR' length='4' decimal='0'/>
+		<field name='NET_AMOUNT' value='360.82' type='DECIMAL' length='19' decimal='2'/>
+		<field name='TRANSFER_BIC' value='0044525495' type='CHAR' length='10' decimal='0'/>
+		<field name='DC' value='D' type='CHAR' length='1' decimal='0'/>
+		<field name='ID' value='209' type='INTEGER' length='11' decimal='0'/>
+	</record>
+	<record>
+		<field name='SCHEME' value='VISA' type='CHAR' length='4' decimal='0'/>
+		<field name='NET_AMOUNT' value='10849.31' type='DECIMAL' length='19' decimal='2'/>
+		<field name='TRANSFER_BIC' value='0044525593' type='CHAR' length='10' decimal='0'/>
+		<field name='DC' value='C' type='CHAR' length='1' decimal='0'/>
+		<field name='ID' value='210' type='INTEGER' length='11' decimal='0'/>
+	</record>
+	<record>
+		<field name='SCHEME' value='VISA' type='CHAR' length='4' decimal='0'/>
+		<field name='NET_AMOUNT' value='11546.09' type='DECIMAL' length='19' decimal='2'/>
+		<field name='TRANSFER_BIC' value='0044525600' type='CHAR' length='10' decimal='0'/>
+		<field name='DC' value='D' type='CHAR' length='1' decimal='0'/>
+		<field name='ID' value='211' type='INTEGER' length='11' decimal='0'/>
+	</record>
+	<record>
+		<field name='SCHEME' value='VISA' type='CHAR' length='4' decimal='0'/>
+		<field name='NET_AMOUNT' value='296.69' type='DECIMAL' length='19' decimal='2'/>
+		<field name='TRANSFER_BIC' value='0044525823' type='CHAR' length='10' decimal='0'/>
+		<field name='DC' value='C' type='CHAR' length='1' decimal='0'/>
+		<field name='ID' value='212' type='INTEGER' length='11' decimal='0'/>
+	</record>
+	<record>
+		<field name='SCHEME' value='VISA' type='CHAR' length='4' decimal='0'/>
+		<field name='NET_AMOUNT' value='681.77' type='DECIMAL' length='19' decimal='2'/>
+		<field name='TRANSFER_BIC' value='0044583503' type='CHAR' length='10' decimal='0'/>
+		<field name='DC' value='C' type='CHAR' length='1' decimal='0'/>
+		<field name='ID' value='213' type='INTEGER' length='11' decimal='0'/>
+	</record>
+</dataset>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="WINDOWS-1251" standalone="yes"?>
+<ED231 EDNo="1" EDDate="2015-01-16" EDAuthor="4533333333" RegisterItemsQuantity="4" EndProcessingDate="2015-01-15" BeginProcessingDate="2015-01-15" ClearingSystemCode="2" RegisterMode="2" xmlns:ed="urn:cbr-ru:ed:v2.0">
+    <CrdTransfRegisterInfo CtrlCode="2000" StatusCode="2" DC="1" BIC="043469751" Sum="500000" RegisterItemID="1">
+	<EDRefID EDAuthor="4333333333" EDDate="2015-01-09" EDNo="235"/>
+	<Annotation>test</Annotation>
+    </CrdTransfRegisterInfo>
+    <CrdTransfRegisterInfo CtrlCode="2000" StatusCode="1" DC="1" BIC="040147781" Sum="100000" RegisterItemID="2">
+	<EDRefID EDAuthor="4333333333" EDDate="2015-01-09" EDNo="235"/>
+	<Annotation>test</Annotation>
+    </CrdTransfRegisterInfo>
+    <CrdTransfRegisterInfo CtrlCode="2000" StatusCode="3" DC="2" BIC="044579647" Sum="200000" RegisterItemID="3">
+	<EDRefID EDAuthor="4333333333" EDDate="2015-01-09" EDNo="235"/>
+	<Annotation>test</Annotation>
+    </CrdTransfRegisterInfo>
+    <CrdTransfRegisterInfo CtrlCode="2000" StatusCode="4" DC="2" BIC="040173771" Sum="400000" RegisterItemID="4">
+	<EDRefID EDAuthor="4333333333" EDDate="2015-01-09" EDNo="235"/>
+	<Annotation>test</Annotation>
+    </CrdTransfRegisterInfo>
+
+</ED231>

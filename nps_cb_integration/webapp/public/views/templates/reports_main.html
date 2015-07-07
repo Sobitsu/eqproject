@@ -1,0 +1,36 @@
+<div class="container">
+    <!-- Logo -->
+    <div class="logo">
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+            </div>
+            <div class="col-md-8 col-sm-6">
+                <div class="admin-cont margin-top-10">
+					<button type="button" class="btn btn-link logout" ng-click="exit()" >
+						<span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;Выход
+					</button>
+                    <div class="user-cont">
+                        <p>Пользователь: {{user.name}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/.logo -->
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs top-menu">
+            <!--    <li ng-class="{active: $state.includes('reports.files_nspk')}"><a data-toggle="tab" ui-sref="reports.files_nspk">Принятые файлы из НСПК</a></li>-->
+                <li ng-class="{active: $state.includes('reports.files_230')}"><a data-toggle="tab" ui-sref="reports.files_230">Файлы отправки 230</a></li>
+                <li ng-class="{active: $state.includes('reports.docs')}"><a data-toggle="tab" ui-sref="reports.docs">Документы</a></li>
+                <li ng-class="{active: $state.includes('reports.response_ed201')}"><a data-toggle="tab" ui-sref="reports.response_ed201">Ответы ЭСИС (ED201)</a></li>
+				<li ng-class="{active: $state.includes('reports.response_ed231')}"><a data-toggle="tab" ui-sref="reports.response_ed231">Ответы ЭСИС (ED231)</a></li>
+            </ul><!-- /.nav-tabs -->
+
+            <!-- ui-view, основной контент лежит тут -->
+            <div ui-view></div>
+        </div>
+    </div>
+</div> <!-- /container -->

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="WINDOWS-1251"?>
+<ED231 xmlns="urn:cbr-ru:ed:v2.0"
+EDNo="234" 
+EDDate="2015-01-27" 
+EDAuthor="1000000000" 
+RegisterItemsQuantity="4" 
+EndProcessingDate="2015-01-20" 
+BeginProcessingDate="2015-01-20" 
+ClearingSystemCode="02" RegisterMode="2" >
+	<dsig:SigValue xmlns:dsig="urn:cbr-ru:dsig:v1.1">bzAwMDAwMKfshbW65izpmTxrhN0WSzpoTFXFlow7COAdwKDHNQS/44dcWc9eIpLW+eTxIj71PrgugN25nbe0sDxRg9FGD8M5ODIxRllEV0pSMDGil5JUnZaPTUVNAcgCAAA=</dsig:SigValue>
+    <CrdTransfRegisterInfo DC="1" BIC="043469751" Sum="500000" RegisterItemID="1" StatusCode="1" CtrlCode="1000">
+    	<EDRefID EDNo="1" EDDate="2015-01-30" EDAuthor="4333333333"></EDRefID>
+    	</CrdTransfRegisterInfo>
+    <CrdTransfRegisterInfo DC="1" BIC="040147781" Sum="100000" RegisterItemID="2" StatusCode="2" CtrlCode="2000" >
+    	<EDRefID EDNo="2" EDDate="2015-01-30" EDAuthor="4333333333"></EDRefID>
+    	</CrdTransfRegisterInfo>
+    <CrdTransfRegisterInfo DC="2" BIC="044579647" Sum="200000" RegisterItemID="3" StatusCode="3" CtrlCode="3000" >
+    	<EDRefID EDNo="3" EDDate="2015-01-30" EDAuthor="4333333333"></EDRefID>
+    	</CrdTransfRegisterInfo>
+    <CrdTransfRegisterInfo DC="2" BIC="040173771" Sum="400000"
+    	RegisterItemID="4" StatusCode="4" CtrlCode="4000" >
+    	<EDRefID EDNo="4" EDDate="2015-01-30" EDAuthor="4333333333"></EDRefID>
+</CrdTransfRegisterInfo>
+<InitialED EDAuthor="4533333333" EDDate="2015-04-25" EDNo="10"/>
+</ED231>
