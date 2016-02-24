@@ -4,7 +4,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import org.hc.nps.Constants;
+import org.hc.wm.Constants;
 import org.hc.jp.db.entities.User;
 import org.hc.jp.mvc.controllers.ControllerHelper;
 import org.hc.jp.js.JSCommon;

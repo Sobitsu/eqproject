@@ -7,7 +7,6 @@ package org.hc.wm.files;
 
 
 import java.util.Date;
-import org.hc.nps.calendar.CalendarUtils;
 import org.hc.jp.utils.DateTimeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,14 +29,11 @@ public class FileNames {
 
 	@Value(value = "${mail.230.type.mast}")
 	private String mail230typemast;
-
 	
 	@Value(value = "${mail.typeX}")
 	private String mailtypex;
 	private static String MESSED230 = "ED230";
 
-	@Autowired
-	private CalendarUtils cu;
 	
 private String getfilenameed230(String platsys, Date todate){
 	String mtype = mail230typemast;
@@ -45,7 +41,7 @@ private String getfilenameed230(String platsys, Date todate){
 	if (platsys.contentEquals("1")) mtype = mail230typevisa;
 	if (platsys.contentEquals("2")) mtype = mail230typemast;
 	String result = idmailsender +"_"+ idmailreceiver +"_"+ mtype +"_"+ mailtypex;
-	result = result +"_"+  DateTimeUtils.formatDate(todate, DateTimeUtils.NSPCMAIL_DATE_FORMAT_STRING)+"_" + cu.getcountfile(platsys, todate) +".xml";
+	result = result +"_"+  DateTimeUtils.formatDate(todate, DateTimeUtils.NSPCMAIL_DATE_FORMAT_STRING)+"_" + ".xml";
 	return result;	
 }
 public String getfilename(String messtype, String platsys, Date todate){

@@ -153,6 +153,11 @@
 	  <artifactId>mysql-connector-java</artifactId>
 	  <version>5.1.30</version>
 	 </dependency>
+         <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>9.4.1207</version>
+         </dependency>
 	 <dependency>
 	  <groupId>commons-codec</groupId>
 	  <artifactId>commons-codec</artifactId>
@@ -192,7 +197,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>org.hc.nps.Main</mainClass>
+							<mainClass>org.hc.wm.Main</mainClass>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
 						</manifest>

@@ -4,8 +4,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import org.hc.jp.mvc.controllers.ControllerHelper;
-import org.hc.nps.exceptions.mvc.js.JSInMessageTable;
-import org.hc.nps.inMessage.InMessageTableGeter;
+//import org.hc.wm.exceptions.mvc.js.JSInMessageTable;
+//import org.hc.wm.inMessage.InMessageTableGeter;
 import org.hc.jp.users.UserAuth;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,7 +27,7 @@ public class InMessagesController
 	@Autowired
 	private UserAuth userAuth;
 	
-	@Autowired
+/*	@Autowired
 	private InMessageTableGeter inMessageTableGeter;
 	
 	@RequestMapping(value="/getInMessagesTable", method = RequestMethod.POST)
@@ -36,7 +36,7 @@ public class InMessagesController
 		//return inMessageTableGeter.getInMessageTable(js, userAuth.getCurrentUser(session));
 		return "";
     }
-	
+*/	
 	
 	@ExceptionHandler(Exception.class)
 	@ResponseBody

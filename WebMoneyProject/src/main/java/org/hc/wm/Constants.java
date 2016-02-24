@@ -12,12 +12,4 @@ public interface Constants
 	public final String PROPERTY_KEY_SERVER_PORT = "server.port";
 	public final int DEFAULT_SERVER_PORT = 8000;
 
-	
-	
-	public final String STATE_CREATE = "CREARE";
-	public final String STATE_UPDATE = "UPDATE";
-	public final String STATE_DONE = "DONE";
-	
-	public final String FILE_NAME_BIKS = "BNKSEEK.DBF";
-
 }

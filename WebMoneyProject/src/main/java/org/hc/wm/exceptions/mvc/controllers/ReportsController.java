@@ -6,9 +6,9 @@ import javax.servlet.http.HttpSession;
 import org.hc.jp.mvc.controllers.ControllerHelper;
 import org.hc.jp.users.UserAuth;
 
-import org.hc.nps.exceptions.mvc.js.JSReportTable;
-import org.hc.nps.mess230.Export230function;
-import org.hc.nps.reports.ReportsTableGetter;
+//import org.hc.nps.exceptions.mvc.js.JSReportTable;
+//import org.hc.nps.mess230.Export230function;
+//import org.hc.nps.reports.ReportsTableGetter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -28,7 +28,7 @@ public class ReportsController
 	@Autowired
 	private UserAuth userAuth;
 	
-	@Autowired
+/*	@Autowired
 	private ReportsTableGetter reportsTableGetter;
 	@Autowired
 	private Export230function export230; 
@@ -52,7 +52,7 @@ public class ReportsController
 			
 	}
 
-
+*/
 	
 	@ExceptionHandler(Exception.class)
 	@ResponseBody
