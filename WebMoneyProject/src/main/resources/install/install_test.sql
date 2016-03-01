@@ -1,13 +1,22 @@
-DROP USER wm_test;
-CREATE USER wm_test WITH password '123456';
-DROP SCHEMA web_money_test CASCADE;
-CREATE SCHEMA web_money_test AUTHORIZATION wm_test;
+
 CREATE SEQUENCE web_money_test.SEQ_ID;
+drop table web_money_test.wm_actives cascade;
+drop table web_money_test.WM_ACTIVE_TYPES cascade;
+drop table web_money_test.user_role cascade;
+drop table web_money_test.
+
 CREATE TABLE web_money_test.WM_ACTIVE_TYPES (
   ID INTEGER PRIMARY KEY DEFAULT NEXTVAL('web_money_test.SEQ_ID'),
   C_CODE VARCHAR(255) NOT NULL,
   C_NAME VARCHAR(255)
 );
+create table web_money_test.wm_actives(
+  ID INTEGER PRIMARY KEY DEFAULT NEXTVAL('web_money_test.SEQ_ID'),
+  C_CODE VARCHAR(255) NOT NULL,
+  C_NAME VARCHAR(255),
+  C_ACTIVE_TYPE INTEGER REFERENCES web_money_test.WM_ACTIVE_TYPES(ID) MATCH FULL 
+);
+
 CREATE TABLE web_money_test.user_role (
   authority varchar(255) NOT NULL,
   name varchar(255) NOT NULL,
