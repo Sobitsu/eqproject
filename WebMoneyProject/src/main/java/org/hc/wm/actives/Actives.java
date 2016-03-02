@@ -10,9 +10,12 @@ package org.hc.wm.actives;
  * @author Dale
  */
 public interface Actives {
-    private final ActiveType actype;
-    private final Double amount;
-    private final Double price;
-    private final OperHistory operations;
-    
+    public ActiveType actype();
+    public Double amount();
+    public Double price();
+    public OperHistory operations();
+    public void actype(ActiveType x);
+    public void amount(Double x);
+    public void price(Double x);
+    public void operations(OperHistory x);
 }
