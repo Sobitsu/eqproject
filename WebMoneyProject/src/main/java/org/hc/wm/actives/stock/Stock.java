@@ -5,6 +5,7 @@
  */
 package org.hc.wm.actives.stock;
 
+import java.util.List;
 import org.hc.wm.actives.ActiveType;
 import org.hc.wm.actives.Actives;
 import org.hc.wm.actives.OperHistory;
@@ -14,11 +15,14 @@ import org.hc.wm.actives.OperHistory;
  * @author Dale
  */
 public class Stock implements Actives {
-    private ActiveType actype = null;
-    private Double amount = null;
-    private Double price = null;
-    private OperHistory operations = null;
-
+    private ActiveType actype;
+    private Double amount;
+    private Double price;
+    private List<OperHistory> operations;
+    
+    public Stock() {
+    }
+    
     @Override
     public ActiveType actype() {
         return actype;
@@ -35,7 +39,7 @@ public class Stock implements Actives {
     }
 
     @Override
-    public OperHistory operations() {
+    public List<OperHistory> operations() {
         return operations;
     }
 
@@ -55,7 +59,7 @@ public class Stock implements Actives {
     }
 
     @Override
-    public void operations(OperHistory x) {
+    public void operations(List<OperHistory> x) {
         operations = x;
     }
 }
