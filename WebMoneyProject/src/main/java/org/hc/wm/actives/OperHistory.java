@@ -9,10 +9,6 @@ package org.hc.wm.actives;
  *
  * @author Dale
  */
-public interface Actives {
-    private final ActiveType actype;
-    private final Double amount;
-    private final Double price;
-    private final OperHistory operations;
+public interface OperHistory {
     
 }
