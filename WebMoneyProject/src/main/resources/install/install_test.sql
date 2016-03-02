@@ -1,10 +1,10 @@
-
-CREATE SEQUENCE web_money_test.SEQ_ID;
 drop table web_money_test.wm_actives cascade;
 drop table web_money_test.WM_ACTIVE_TYPES cascade;
 drop table web_money_test.user_role cascade;
-drop table web_money_test.
+drop table web_money_test.users cascade;
+drop SEQUENCE web_money_test.SEQ_ID;
 
+CREATE SEQUENCE web_money_test.SEQ_ID;
 CREATE TABLE web_money_test.WM_ACTIVE_TYPES (
   ID INTEGER PRIMARY KEY DEFAULT NEXTVAL('web_money_test.SEQ_ID'),
   C_CODE VARCHAR(255) NOT NULL,
